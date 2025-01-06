@@ -108,7 +108,7 @@
       <AssemblyReference>System.Memory.Data</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1088,3938.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1472,3927" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="upr:ILocalResource" Name="greetExcel" />
       <Variable x:TypeArguments="x:String" Name="variable1" />
@@ -122,17 +122,17 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="541.6,3915.2" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="542,3904" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="540,3437.6" sap2010:WorkflowViewState.IdRef="Sequence_7">
+        <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="540,3426" sap2010:WorkflowViewState.IdRef="Sequence_7">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="506.4,768" sap2010:WorkflowViewState.IdRef="TryCatch_3">
+          <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="506,764" sap2010:WorkflowViewState.IdRef="TryCatch_3">
             <TryCatch.Try>
-              <ucas:DownloadStorageFile TimeoutMS="{x:Null}" Destination="C:\UiPath Practice\BirthdayAndFestivalGreet.xlsx" DisplayName="Download File from Storage Bucket" sap:VirtualizedContainerService.HintSize="416,134.4" sap2010:WorkflowViewState.IdRef="DownloadStorageFile_1" Path="BirthdayAndFestivalGreet.xlsx" Result="[greetExcel]" StorageBucketName="Greeting List" />
+              <ucas:DownloadStorageFile TimeoutMS="{x:Null}" Destination="C:\UiPath Practice\BirthdayAndFestivalGreet.xlsx" DisplayName="Download File from Storage Bucket" sap:VirtualizedContainerService.HintSize="416,133" sap2010:WorkflowViewState.IdRef="DownloadStorageFile_1" Path="BirthdayAndFestivalGreet.xlsx" Result="[greetExcel]" StorageBucketName="Greeting List" />
             </TryCatch.Try>
             <TryCatch.Catches>
               <Catch x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="Catch`1_2">
@@ -140,20 +140,20 @@
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,348" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,346" sap2010:WorkflowViewState.IdRef="Sequence_12">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="382.4,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Trace" Message="[&quot;File does not exist in storage budket&quot;]" />
-                    <Throw Exception="[New SystemException(&quot;File does not exist in storage budket&quot;)]" sap:VirtualizedContainerService.HintSize="382.4,113.6" sap2010:WorkflowViewState.IdRef="Throw_2" />
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="382,173" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Trace" Message="[&quot;File does not exist in storage budket&quot;]" />
+                    <Throw Exception="[New SystemException(&quot;File does not exist in storage budket&quot;)]" sap:VirtualizedContainerService.HintSize="382,113" sap2010:WorkflowViewState.IdRef="Throw_2" />
                   </Sequence>
                 </ActivityAction>
               </Catch>
             </TryCatch.Catches>
             <TryCatch.Finally>
-              <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="416,89.6" sap2010:WorkflowViewState.IdRef="Sequence_13">
+              <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="416,89" sap2010:WorkflowViewState.IdRef="Sequence_13">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -162,20 +162,20 @@
               </Sequence>
             </TryCatch.Finally>
           </TryCatch>
-          <ui:ReadRange Range="{x:Null}" WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[dt_items]" DisplayName="Read Excel file" sap:VirtualizedContainerService.HintSize="506.4,120" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="CCMail" WorkbookPath="[greetExcel.LocalPath]" />
-          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_items]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="506.4,346.4" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+          <ui:ReadRange Range="{x:Null}" WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[dt_items]" DisplayName="Read Excel file" sap:VirtualizedContainerService.HintSize="506,120" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="CCMail" WorkbookPath="[greetExcel.LocalPath]" />
+          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_items]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="506,345" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
             <ui:ForEachRow.Body>
               <ActivityAction x:TypeArguments="sd:DataRow">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="467.2,164.8" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="468,165" sap2010:WorkflowViewState.IdRef="Sequence_6">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Assign sap:VirtualizedContainerService.HintSize="433.6,104.8" sap2010:WorkflowViewState.IdRef="Assign_4">
+                  <Assign sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_4">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:String">[mailString]</OutArgument>
                     </Assign.To>
@@ -193,8 +193,8 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:ForEachRow>
-          <ui:ReadRange Range="{x:Null}" WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[dt_values]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="506.4,120" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="FestivalWishes" WorkbookPath="[greetExcel.LocalPath]" />
-          <Assign sap:VirtualizedContainerService.HintSize="506.4,113.6" sap2010:WorkflowViewState.IdRef="Assign_2">
+          <ui:ReadRange Range="{x:Null}" WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[dt_values]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="506,120" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="FestivalWishes" WorkbookPath="[greetExcel.LocalPath]" />
+          <Assign sap:VirtualizedContainerService.HintSize="506,114" sap2010:WorkflowViewState.IdRef="Assign_2">
             <Assign.To>
               <OutArgument x:TypeArguments="x:String">[currentDate]</OutArgument>
             </Assign.To>
@@ -202,21 +202,21 @@
               <InArgument x:TypeArguments="x:String">[DateTime.Now.ToString("dd/MM/yyyy")]</InArgument>
             </Assign.Value>
           </Assign>
-          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_values]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="506.4,1909.6" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_values]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="506,1903" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
             <ui:ForEachRow.Body>
               <ActivityAction x:TypeArguments="sd:DataRow">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="503.2,1736.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="504,1732" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <If Condition="[CurrentRow(&quot;Date&quot;).Equals(currentDate)]" sap:VirtualizedContainerService.HintSize="469.6,1676.8" sap2010:WorkflowViewState.IdRef="If_1">
+                  <If Condition="[CurrentRow(&quot;Date&quot;).Equals(currentDate)]" sap:VirtualizedContainerService.HintSize="470,1672" sap2010:WorkflowViewState.IdRef="If_1">
                     <If.Then>
-                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="468,1374.4" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="468,1370" sap2010:WorkflowViewState.IdRef="Sequence_4">
                         <Sequence.Variables>
                           <Variable x:TypeArguments="x:String" Name="CCmail" />
                           <Variable x:TypeArguments="x:String" Name="result" />
@@ -227,7 +227,7 @@
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <Assign sap:VirtualizedContainerService.HintSize="434.4,113.6" sap2010:WorkflowViewState.IdRef="Assign_3">
+                        <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_3">
                           <Assign.To>
                             <OutArgument x:TypeArguments="x:String">[ToMail]</OutArgument>
                           </Assign.To>
@@ -235,8 +235,8 @@
                             <InArgument x:TypeArguments="x:String">[mailString.TrimEnd(","c)]</InArgument>
                           </Assign.Value>
                         </Assign>
-                        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="434.4,122.4" sap2010:WorkflowViewState.IdRef="WriteLine_4" Text="[ToMail]" />
-                        <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" Files="{x:Reference __ReferenceID0}" From="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" ResourceAttachmentList="{x:Null}" ResourceAttachments="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" AttachmentInputMode="FilePaths" AttachmentsCollection="[New List(Of String) From {CurrentRow(&quot;Gig&quot;).ToString}]" Body="[string.Format(&quot;&lt;P&gt;&lt;SPAN&gt;Hi &lt;/SPAN&gt;&lt;SPAN&gt;All&lt;/SPAN&gt;&lt;SPAN&gt;,&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;{0}&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;/P&gt;&lt;P&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;Thanks and Regards&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;U&lt;/SPAN&gt;&lt;SPAN&gt;i&lt;/SPAN&gt;&lt;SPAN&gt;Path Bot&lt;/SPAN&gt;&lt;/P&gt;&quot;, CurrentRow(&quot;Template&quot;).ToString())]" ConnectionId="922aa600-73d7-4f4a-a590-f938d547ad7f" ContinueOnError="False" DisplayName="Send SMTP Email" Email="uipathbot1514@gmail.com" EnableSSL="True" sap:VirtualizedContainerService.HintSize="434.4,430.4" sap2010:WorkflowViewState.IdRef="SendMail_2" IgnoreCRL="False" IsBodyHtml="True" Name="Praveen A Parthasarathy" Password="ndtq cpww jzzh nggi" Port="587" Result="[result]" SecureConnection="StartTls" Server="smtp.gmail.com" Subject="[CurrentRow(&quot;Subject Name&quot;).ToString]" To="[ToMail]" UseISConnection="False" UseOAuth="False">
+                        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="434,122" sap2010:WorkflowViewState.IdRef="WriteLine_4" Text="[ToMail]" />
+                        <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" Files="{x:Reference __ReferenceID0}" From="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" ResourceAttachmentList="{x:Null}" ResourceAttachments="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" AttachmentInputMode="FilePaths" AttachmentsCollection="[New List(Of String) From {CurrentRow(&quot;Gig&quot;).ToString}]" Body="[string.Format(&quot;&lt;P&gt;&lt;SPAN&gt;Hi &lt;/SPAN&gt;&lt;SPAN&gt;All&lt;/SPAN&gt;&lt;SPAN&gt;,&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;{0}&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;/P&gt;&lt;P&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;Thanks and Regards&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;U&lt;/SPAN&gt;&lt;SPAN&gt;i&lt;/SPAN&gt;&lt;SPAN&gt;Path Bot&lt;/SPAN&gt;&lt;/P&gt;&quot;, CurrentRow(&quot;Template&quot;).ToString())]" ConnectionId="922aa600-73d7-4f4a-a590-f938d547ad7f" ContinueOnError="False" DisplayName="Send SMTP Email" Email="uipathbot1514@gmail.com" EnableSSL="True" sap:VirtualizedContainerService.HintSize="434,426" sap2010:WorkflowViewState.IdRef="SendMail_2" IgnoreCRL="False" IsBodyHtml="True" Name="Praveen A Parthasarathy" Password="ndtq cpww jzzh nggi" Port="587" Result="[result]" SecureConnection="StartTls" Server="smtp.gmail.com" Subject="[CurrentRow(&quot;Subject Name&quot;).ToString]" To="[ToMail]" UseISConnection="False" UseOAuth="False">
                           <ui:SendMail.AttachmentsBackup>
                             <usau:BackupSlot x:TypeArguments="umame:AttachmentInputMode" StoredValue="FilePaths">
                               <usau:BackupSlot.BackupValues>
@@ -274,7 +274,7 @@
                             </usau:BackupSlot>
                           </ui:SendMail.ConnectionDetailsBackupSlot>
                         </ui:SendMail>
-                        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="434,122" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="[result]" />
+                        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="434,122" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="[&quot;Result is :&quot; + result]" />
                         <If Condition="[result.Equals(&quot;250&quot;)]" sap:VirtualizedContainerService.HintSize="434,526" sap2010:WorkflowViewState.IdRef="If_2">
                           <If.Then>
                             <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,224" sap2010:WorkflowViewState.IdRef="Sequence_9">
